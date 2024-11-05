@@ -1,0 +1,61 @@
+# This file exists so you can easily regenerate your project.
+#
+# `cookiepatcher` is a convenient shim around `cookiecutter`
+# for regenerating projects (it will generate a .cookiecutterrc
+# automatically for any template). To use it:
+#
+#    pip install cookiepatcher
+#    cookiepatcher gh:ionelmc/cookiecutter-pylibrary analyzers-py
+#
+# See:
+#    https://pypi.org/project/cookiepatcher
+#
+# Alternatively, you can run:
+#
+#    cookiecutter --overwrite-if-exists --config-file=analyzers-py/.cookiecutterrc gh:ionelmc/cookiecutter-pylibrary
+
+default_context:
+    c_extension_optional: "no"
+    c_extension_support: "no"
+    codacy: "no"
+    codacy_projectid: "[Get ID from https://app.codacy.com/gh/analyze-rs/analyzers-py/settings]"
+    codeclimate: "no"
+    codecov: "yes"
+    command_line_interface: "no"
+    command_line_interface_bin_name: "analyzers-py"
+    coveralls: "no"
+    distribution_name: "analyzers-py"
+    email: "kiran.tambe08@gmail.com"
+    formatter_quote_style: "double"
+    full_name: "Kiran Tambe"
+    function_name: "compute"
+    github_actions: "yes"
+    github_actions_osx: "yes"
+    github_actions_windows: "yes"
+    license: "MIT license"
+    module_name: "analyzers"
+    package_name: "analyzers_py"
+    pre_commit: "yes"
+    project_name: "PyAnalyzers"
+    project_short_description: "Python wrapper for analyze.rs web api"
+    pypi_badge: "yes"
+    pypi_disable_upload: "no"
+    release_date: "today"
+    repo_hosting: "github.com"
+    repo_hosting_domain: "1"
+    repo_main_branch: "main"
+    repo_name: "analyzers-py"
+    repo_username: "analyze-rs"
+    scrutinizer: "no"
+    setup_py_uses_setuptools_scm: "no"
+    sphinx_docs: "yes"
+    sphinx_docs_hosting: "https://analyzers-py.readthedocs.io/"
+    sphinx_doctest: "no"
+    sphinx_theme: "furo"
+    test_matrix_separate_coverage: "no"
+    tests_inside_package: "no"
+    version: "0.0.0"
+    version_manager: "bump2version"
+    website: "https://analyze.rs/"
+    year_from: "2024"
+    year_to: "2024"
