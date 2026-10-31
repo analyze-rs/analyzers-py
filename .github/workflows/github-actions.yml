@@ -138,7 +138,7 @@ jobs:
     - name: install dependencies
       run: |
         # Publishing tools (twine) are not needed to run the test matrix.
-        python -mpip install --progress-bar=off virtualenv pip setuptools tox
+        python -mpip install --progress-bar=off -c ci/test-constraints.txt virtualenv pip setuptools tox
         virtualenv --version
         pip --version
         tox --version
