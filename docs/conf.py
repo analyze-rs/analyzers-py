@@ -20,13 +20,13 @@ version = release = "0.0.0"
 pygments_style = "trac"
 templates_path = ["."]
 extlinks = {
-    "issue": ("https://1/analyze-rs/analyzers-py/issues/%s", "#%s"),
-    "pr": ("https://1/analyze-rs/analyzers-py/pull/%s", "PR #%s"),
+    "issue": ("https://github.com/analyze-rs/analyzers-py/issues/%s", "#%s"),
+    "pr": ("https://github.com/analyze-rs/analyzers-py/pull/%s", "PR #%s"),
 }
 
 html_theme = "furo"
 html_theme_options = {
-    "githuburl": "https://1/analyze-rs/analyzers-py/",
+    "githuburl": "https://github.com/analyze-rs/analyzers-py/",
 }
 
 html_use_smartypants = True

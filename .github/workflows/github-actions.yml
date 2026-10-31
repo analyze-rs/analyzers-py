@@ -13,18 +13,18 @@ jobs:
             python: '3.11'
             toxpython: 'python3.11'
             tox_env: 'check'
-            os: 'ubuntu-latest'
+            os: 'ubuntu-24.04'
           - name: 'docs'
             python: '3.11'
             toxpython: 'python3.11'
             tox_env: 'docs'
-            os: 'ubuntu-latest'
+            os: 'ubuntu-24.04'
           - name: 'py39 (ubuntu)'
             python: '3.9'
             toxpython: 'python3.9'
             python_arch: 'x64'
             tox_env: 'py39'
-            os: 'ubuntu-latest'
+            os: 'ubuntu-24.04'
           - name: 'py39 (windows)'
             python: '3.9'
             toxpython: 'python3.9'
@@ -42,7 +42,7 @@ jobs:
             toxpython: 'python3.10'
             python_arch: 'x64'
             tox_env: 'py310'
-            os: 'ubuntu-latest'
+            os: 'ubuntu-24.04'
           - name: 'py310 (windows)'
             python: '3.10'
             toxpython: 'python3.10'
@@ -60,7 +60,7 @@ jobs:
             toxpython: 'python3.11'
             python_arch: 'x64'
             tox_env: 'py311'
-            os: 'ubuntu-latest'
+            os: 'ubuntu-24.04'
           - name: 'py311 (windows)'
             python: '3.11'
             toxpython: 'python3.11'
@@ -78,7 +78,7 @@ jobs:
             toxpython: 'python3.12'
             python_arch: 'x64'
             tox_env: 'py312'
-            os: 'ubuntu-latest'
+            os: 'ubuntu-24.04'
           - name: 'py312 (windows)'
             python: '3.12'
             toxpython: 'python3.12'
@@ -96,7 +96,7 @@ jobs:
             toxpython: 'pypy3.9'
             python_arch: 'x64'
             tox_env: 'pypy39'
-            os: 'ubuntu-latest'
+            os: 'ubuntu-24.04'
           - name: 'pypy39 (windows)'
             python: 'pypy-3.9'
             toxpython: 'pypy3.9'
@@ -114,7 +114,7 @@ jobs:
             toxpython: 'pypy3.10'
             python_arch: 'x64'
             tox_env: 'pypy310'
-            os: 'ubuntu-latest'
+            os: 'ubuntu-24.04'
           - name: 'pypy310 (windows)'
             python: 'pypy-3.10'
             toxpython: 'pypy3.10'
@@ -128,16 +128,17 @@ jobs:
             tox_env: 'pypy310'
             os: 'macos-latest'
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v7
       with:
         fetch-depth: 0
-    - uses: actions/setup-python@v5
+    - uses: actions/setup-python@v7
       with:
         python-version: ${{ matrix.python }}
         architecture: ${{ matrix.python_arch }}
     - name: install dependencies
       run: |
-        python -mpip install --progress-bar=off -r ci/requirements.txt
+        # Publishing tools (twine) are not needed to run the test matrix.
+        python -mpip install --progress-bar=off -c ci/test-constraints.txt virtualenv pip setuptools tox
         virtualenv --version
         pip --version
         tox --version
@@ -150,8 +151,8 @@ jobs:
   finish:
     needs: test
     if: ${{ always() }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
-    - uses: codecov/codecov-action@v3
+    - uses: codecov/codecov-action@v7
       with:
-        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        token: ${{ secrets.CODECOV_TOKEN }}

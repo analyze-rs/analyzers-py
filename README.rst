@@ -21,7 +21,7 @@ Documentation
 =============
 
 
-https://analyzers-py.readthedocs.io/
+https://github.com/analyze-rs/analyzers-py/tree/main/docs
 
 
 Development

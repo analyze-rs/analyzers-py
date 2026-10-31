@@ -1,0 +1,2 @@
+# virtualenv 21 imports a stat constant missing from Windows PyPy 3.9.
+virtualenv<21; platform_python_implementation == "PyPy" and python_version == "3.9" and sys_platform == "win32"
