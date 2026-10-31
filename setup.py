@@ -22,7 +22,7 @@ setup(
     ),
     author="Kiran Tambe",
     author_email="kiran.tambe08@gmail.com",
-    url="https://1/analyze-rs/analyzers-py",
+    url="https://github.com/analyze-rs/analyzers-py",
     packages=find_packages("src"),
     package_dir={"": "src"},
     py_modules=[path.stem for path in Path("src").glob("*.py")],
@@ -52,9 +52,9 @@ setup(
         "Topic :: Utilities",
     ],
     project_urls={
-        "Documentation": "https://analyzers-py.readthedocs.io/",
-        "Changelog": "https://analyzers-py.readthedocs.io/en/latest/changelog.html",
-        "Issue Tracker": "https://1/analyze-rs/analyzers-py/issues",
+        "Documentation": "https://github.com/analyze-rs/analyzers-py/tree/main/docs",
+        "Changelog": "https://github.com/analyze-rs/analyzers-py/blob/main/CHANGELOG.rst",
+        "Issue Tracker": "https://github.com/analyze-rs/analyzers-py/issues",
     },
     keywords=[
         # eg: "keyword1", "keyword2", "keyword3",

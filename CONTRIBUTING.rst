@@ -8,7 +8,7 @@ little bit helps, and credit will always be given.
 Bug reports
 ===========
 
-When `reporting a bug <https://1/analyze-rs/analyzers-py/issues>`_ please include:
+When `reporting a bug <https://github.com/analyze-rs/analyzers-py/issues>`_ please include:
 
     * Your operating system name and version.
     * Any details about your local setup that might be helpful in troubleshooting.
@@ -24,7 +24,7 @@ articles, and such.
 Feature requests and feedback
 =============================
 
-The best way to send feedback is to file an issue at https://1/analyze-rs/analyzers-py/issues.
+The best way to send feedback is to file an issue at https://github.com/analyze-rs/analyzers-py/issues.
 
 If you are proposing a feature:
 
@@ -37,7 +37,7 @@ Development
 
 To set up `analyzers-py` for local development:
 
-1. Fork `analyzers-py <https://1/analyze-rs/analyzers-py>`_
+1. Fork `analyzers-py <https://github.com/analyze-rs/analyzers-py>`_
    (look for the "Fork" button).
 2. Clone your fork locally::
 

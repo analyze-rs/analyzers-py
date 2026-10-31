@@ -137,7 +137,8 @@ jobs:
         architecture: ${{ matrix.python_arch }}
     - name: install dependencies
       run: |
-        python -mpip install --progress-bar=off -r ci/requirements.txt
+        # Publishing tools (twine) are not needed to run the test matrix.
+        python -mpip install --progress-bar=off virtualenv pip setuptools tox
         virtualenv --version
         pip --version
         tox --version
